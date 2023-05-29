@@ -72,7 +72,8 @@ func (s *HotelService) InsertHotels(hotels []map[string]string) error {
 			UpdatedAt:  time.Now(),
 		}
 
-		err := s.Repo.InsertHotel(hotel)
+		// err := s.Repo.InsertHotel(hotel)
+		err := s.Repo.InsertOrUpdateHotel(hotel)
 		if err != nil {
 			return err
 		}
